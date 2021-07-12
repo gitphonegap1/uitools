@@ -1,6 +1,6 @@
 /* eslint-disable */
 const express = require('express');
-const PORT = process.env.port || 3000;
+const PORT = process.env.port || 4000;
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -15,4 +15,3 @@ app.get('/hello',(req,res,next)=>{
 app.listen(PORT,()=>{
     console.info('Server is running on the PORT :: '+PORT);
 })
-
