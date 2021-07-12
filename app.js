@@ -18,7 +18,6 @@ app.listen(PORT,()=>{
 
 
 /* eslint-disable */
-const functions = require("firebase-functions");
 const express = require('express');
 const validator = require('email-validator');
 const PORT = process.env.PORT || 4000;
@@ -69,4 +68,3 @@ app.listen(PORT,()=>{
 
 // require('./routes/routes.js')(app);
 
-exports.app = functions.https.onRequest(app);
