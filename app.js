@@ -19,20 +19,6 @@ app.use(cors({origin: '*'}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.get('/hello',(req,res,next)=>{
-    //res.send('Welcome to uitools_services with firebase');
-    var query = 'select * from applications order by id';
-    pool.query(query,(err,data)=>{
-		 if(err){
-
-		 }else{
-			 var list = data.rows;
-				res.send(list);
-		 }
-	});
-})
-
-
 app.listen(PORT,()=>{
     console.info('Server is running on the PORT :: '+PORT);
 })
