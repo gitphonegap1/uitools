@@ -6,6 +6,7 @@ exports.getAllApplications = (req, res)=> {
 	var query = 'select * from applications order by id';
 	upl.client.query(query,(err,data)=>{
 		 if(err){
+			 res.send(err)
 		 }else{
 			 var list = data.rows;
 				res.send(list);

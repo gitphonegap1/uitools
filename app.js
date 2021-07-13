@@ -19,6 +19,8 @@ app.use(cors({origin: '*'}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+require('./routes/routes.js')(app);
+
 app.listen(PORT,()=>{
     console.info('Server is running on the PORT :: '+PORT);
 })
